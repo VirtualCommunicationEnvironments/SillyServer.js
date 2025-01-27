@@ -42,13 +42,13 @@ You need to include the sillyclient.js in your HTML:
 
 Launch the server using the command:
 ```js
-node main.js -port 55000
+node main.js -port 80
 ```
 
 On the client side include the library sillyclient.js and connect using:
 ```js
 var server = new SillyClient();
-server.connect( location.host + ":55000", "CHAT");
+server.connect( location.host + ":80", "CHAT");
 
 //this method is called when the server accepts the connection (no ID yet nor info about the room)
 server.on_connect = function(){

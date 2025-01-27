@@ -1,6 +1,7 @@
 //EXAMPLE APP
 //*****************
 var server = null;
+var serverIP = '172.201.217.153';
 
 var room_name = "DEMO";
 $("#roomname").val( room_name );
@@ -9,12 +10,12 @@ $("#connect-room").click( function(){
 	room_name = $("#roomname").val();
 	console.log("connecting to " + room_name );
 	server.close();
-	server.connect( location.host + ":55000", room_name );
+	server.connect( serverIP + ":80", room_name );
 });
 
 //connect to the server
 server = new SillyClient();
-server.connect( location.host + ":55000", room_name);
+server.connect( serverIP + ":80", room_name);
 
 //change the text in the website
 $("#server_info").html( "Conectandose..." );

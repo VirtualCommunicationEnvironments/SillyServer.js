@@ -52,7 +52,7 @@ function SillyServer( server, secure )
 }
 
 SillyServer.version = "1.3";
-SillyServer.default_port = 55000;
+SillyServer.default_port = 80;
 
 SillyServer.prototype.listen = function( port )
 {
